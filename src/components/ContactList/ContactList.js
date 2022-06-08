@@ -30,6 +30,12 @@ export default class ContactList extends Component {
 }
 
 ContactList.propTypes = {
-    contacts: PropTypes.array.isRequired,
+    contacts: PropTypes.arrayOf(
+        PropTypes.shape({
+            name: PropTypes.string.isRequired,
+            id: PropTypes.string.isRequired,
+            number: PropTypes.string.isRequired,
+        })
+    ).isRequired,
     deleteContact: PropTypes.func.isRequired,
 };
