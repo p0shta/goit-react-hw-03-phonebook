@@ -16,6 +16,7 @@ export default class Filter extends Component {
                     onChange={this.onChange}
                     className={s.input}
                     type="text"
+                    value={this.props.filter}
                 />
             </>
         );
@@ -23,5 +24,6 @@ export default class Filter extends Component {
 }
 
 Filter.propTypes = {
+    filter: PropTypes.string.isRequired,
     filterContacts: PropTypes.func.isRequired,
 };

@@ -72,7 +72,10 @@ export class App extends Component {
                 <h1 className="title">Phonebook</h1>
                 <ContactForm addContact={this.addContact} />
                 <h2 className="title">Contacts</h2>
-                <Filter filterContacts={this.filterContacts} />
+                <Filter
+                    filterContacts={this.filterContacts}
+                    filter={this.state.filter}
+                />
                 <ContactList
                     contacts={filteredContacts}
                     deleteContact={this.deleteContact}
